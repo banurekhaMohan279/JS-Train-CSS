@@ -5,22 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../index.css" />
     <title>Vertical and Horizontal alignment</title>
+    <style>
+      .parent {
+        height: 100px;
+        position: relative;
+        background: white;
+      }
+      .child {
+        position: absolute;
+        height: 50px;
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -150px;
+        background: blue;
+      }
+      .child1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: red;
+      }
+      .parent2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background: white;
+      }
+      .child2 {
+        background: red;
+        width: 50%;
+      }
+    </style>
   </head>
   <body>
     <div class="page-center">
       <div class="col-1">
         <h1>Vertical and Horizontal alignment</h1>
-        <h6>Known width and height</h6>
+        <h6>
+          Known width and height - negative margin to half of height & width
+        </h6>
+        <div class="parent">
+          <div class="child">
+            I'm a block-level element a fixed height and width, centered within
+            my parent.
+          </div>
+        </div>
         <h6>Unknown width and height</h6>
+        <div class="parent">
+          <div class="child1">
+            I'm a block-level element with an unknown height, centered within my
+            parent.
+          </div>
+        </div>
+
         <h6>Flexbox</h6>
+        <div class="parent2">
+          <div class="child2">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
         <h6>Grid</h6>
-        <a href=".html" class="prev-btn"> &larr; </a>
+        <a href="3-vertical-block.html" class="prev-btn"> &larr; </a>
       </div>
       <div class="col-2">
         <a href=".html" class="next-btn"> &rarr; </a>
-        <code class="code-snippet-html"></code>
-        <code class="code-snippet-js"></code>
-        <code class="code-snippet-tip"></code>
+        <xmp class="code-snippet-html"><div class="parent">
+          <div class="child">
+            I'm a block-level element a fixed height and width, centered
+            vertically within my parent.
+          </div>
+        </div>
+        <div class="parent">
+          <div class="child1">
+            I'm a block-level element with an unknown height, centered within my
+            parent.
+          </div>
+        </div>
+        <div class="parent2">
+          <div class="child2">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+      </xmp>
+        <code class="code-snippet-js"
+          >.parent {
+          <code class="code-snippet-tip">
+            height: 100px; position: relative;</code
+          >
+          background: white; } .child {
+          <code class="code-snippet-tip">
+            position: absolute; height: 50px; width: 300px; top: 50%; left: 50%;
+            margin: -25px 0 0 -150px;</code
+          >
+          background: blue; }.child1 {
+          <code class="code-snippet-tip"
+            >position: absolute; top: 50%; left: 50%; transform: translate(-50%
+            ,-50%);</code
+          >
+          background: red; }.parent2 {
+          <code class="code-snippet-tip"
+            >display: flex; justify-content: center; align-items: center;
+            height: 100px;</code
+          >
+          background: white; }</code
+        >
       </div>
     </div>
   </body>
