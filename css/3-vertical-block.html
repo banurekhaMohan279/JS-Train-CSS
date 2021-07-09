@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Vertical centering Part 2</title>
+    <style>
+      .parent {
+        position: relative;
+        background: white;
+        height: 100px;
+      }
+      .child {
+        position: absolute;
+        height: 50px;
+        top: 50%;
+        margin-top: -25px;
+        background: red;
+      }
+      .child1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: red;
+      }
+      .parent2 {
+        display: table;
+        height: 100px;
+        background: white;
+      }
+      .child2 {
+        display: table-cell;
+        vertical-align: middle;
+        background: red;
+      }
+      .parent3 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100px;
+        background: white;
+      }
+      .child3 {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-center">
+      <div class="col-1">
+        <h1>Vertical centering Part 2</h1>
+        <h5>Block elements</h5>
+        <h6>Known width- negative margin to half of height</h6>
+        <div class="parent">
+          <div class="child">
+            I'm a block-level element with a fixed height, centered vertically
+            within my parent.
+          </div>
+        </div>
+        <h6>UnKnown width - translateY</h6>
+        <div class="parent">
+          <div class="child1">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+        <h6>UnKnown width - content stretched - display table</h6>
+        <div class="parent2">
+          <div class="child2">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+        <h6>UnKnown width - display flex</h6>
+        <div class="parent3">
+          <div class="child3">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+        <a href="2-vertical-inline.html" class="prev-btn"> &larr; </a>
+      </div>
+      <div class="col-2">
+        <a href=".html" class="next-btn"> &rarr; </a>
+        <xmp class="code-snippet-html"><div class="parent">
+          <div class="child">
+            I'm a block-level element with a fixed height, centered vertically
+            within my parent.
+          </div>
+        </div>
+        <hr/>
+        <div class="parent">
+          <div class="child1">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+        <div class="parent2">
+          <div class="child2">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+        <div class="parent3">
+          <div class="child3">
+            I'm a block-level element with an unknown height, centered
+            vertically within my parent.
+          </div>
+        </div>
+      </xmp>
+        <code class="code-snippet-js">
+          .parent {
+          <code class="code-snippet-tip"
+            >position: relative;height: 100px;
+          </code>
+          background: white; } .child {<code class="code-snippet-tip">
+            position: absolute; height: 50px; top: 50%; margin-top: -25px; </code
+          >background: red; }.child1 {
+          <code class="code-snippet-tip">
+            position: absolute; top: 50%; transform: translateY(-50%);</code
+          >
+          background: red; }.parent2 {
+          <code class="code-snippet-tip">display: table; </code>height: 100px;
+          background: white; } .child2 {
+          <code class="code-snippet-tip"
+            >display: table-cell; vertical-align: middle; </code
+          >background: red; }.parent3{
+          <code class="code-snippet-tip"
+            >display:flex; justify-content:center;flex-direction: column;</code
+          >
+          }</code
+        >
+      </div>
+    </div>
+  </body>
+</html>
