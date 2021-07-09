@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Vertical Centering</title>
+    <style>
+      .inline-ver {
+        line-height: 50px;
+        height: 50px;
+        width: 400px;
+        border: 1px solid grey;
+      }
+      .multi-inline-table-ver {
+        display: table;
+        border: 1px solid grey;
+        text-align: start;
+      }
+      .multi-inline-table-ver p {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .multi-inline-table-ver-1 {
+        display: flex;
+        justify-content: center;
+      }
+      .multi-inline-table-ver-2 {
+        position: relative;
+      }
+      .multi-inline-table-ver-2::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      .multi-inline-table-ver-2 p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-center">
+      <div class="col-1">
+        <h1>Vertical Centering - Inline Part1</h1>
+        <h5>Inline elements like texts or links</h5>
+        <div class="inline-ver">
+          <a> I'm a vertically centered link </a>
+        </div>
+        <h5>
+          Multiple lines of Inline element like texts or links inside a display
+          table
+        </h5>
+        <h6>Mthd 1 : vertical align middle</h6>
+        <div class="multi-inline-table-ver">
+          <p>
+            I'm a long long long vertically centered multiple lines of text in a
+            CSS-created table layout.
+          </p>
+        </div>
+        <h6>Mthd 2 : display flex</h6>
+        <div class="multi-inline-table-ver-1">
+          <p>
+            I'm a long long long vertically centered multiple lines of text in a
+            CSS-created table layout.
+          </p>
+        </div>
+        <h6>
+          The above two methods work with parent height - else use ghost element
+        </h6>
+        <div class="multi-inline-table-ver-2">
+          <p>
+            I'm a long long long vertically centered multiple lines of text in a
+            CSS-created table layout.
+          </p>
+        </div>
+
+        <a href="1-horizontal.html" class="prev-btn"> &larr; </a>
+      </div>
+      <div class="col-2">
+        <a href=".html" class="next-btn"> &rarr; </a>
+        <xmp class="code-snippet-html"><div class="inline-ver">
+          <a> I'm a vertically centered link </a>
+        </div><div class="multi-inline-table-ver">
+          <p>
+            I'm a long long long vertically centered multiple lines of text in a
+            CSS-created table layout.
+          </p>
+        </div>
+        <div class="multi-inline-table-ver-1">
+          <p>
+            I'm a long long long vertically centered multiple lines of text in a
+            CSS-created table layout.
+          </p>
+        </div>
+        <div class="multi-inline-table-ver-2">
+          <p>
+            I'm a long long long vertically centered multiple lines of text in a
+            CSS-created table layout.
+          </p>
+        </div>
+      </xmp>
+        <code class="code-snippet-js"
+          >.inline-ver {
+          <code class="code-snippet-tip"> line-height: 100px;</code>
+          height: 100px; } .multi-inline-table-ver {
+          <code class="code-snippet-tip"> display: table;</code>
+          border: 1px solid grey; } .multi-inline-table-ver p { display:
+          table-cell;
+          <code class="code-snippet-tip"> vertical-align: middle;</code>
+          } .multi-inline-table-ver-1 {
+          <code class="code-snippet-tip"
+            >display: flex; justify-content: center;</code
+          >
+          } .multi-inline-table-ver-2 { position: relative; }
+          .multi-inline-table-ver-2::before {
+          <code class="code-snippet-tip"
+            >content: ""; display: inline-block; height: 100%; vertical-align:
+            middle; } .multi-inline-table-ver-2 p { display: inline-block;
+            vertical-align: middle;</code
+          >
+          }
+        </code>
+      </div>
+    </div>
+  </body>
+</html>
