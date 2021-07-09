@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Multi-column Layout</title>
+    <style>
+      .m1 {
+        columns: 3;
+      }
+      .m2 {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-center">
+      <div class="col-1">
+        <h1>Multi-column Layout</h1>
+        <h6>columns css</h6>
+        <p class="m1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <h6>Display flex</h6>
+        <div class="m2">
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation
+          </div>
+          <div>
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse
+          </div>
+          <div>
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum
+          </div>
+        </div>
+        <a href="4-vertical-horizontal.html" class="prev-btn"> &larr; </a>
+      </div>
+      <div class="col-2">
+        <a href=".html" class="next-btn"> &rarr; </a>
+        <xmp class="code-snippet-html">
+          <p class="m1">Lorem ipsum ...</p>
+          <div class="m2">
+            <div>Lorem ipsum ...</div>
+            <div>Lorem ipsum ...</div>
+            <div>Lorem ipsum ...</div>
+          </div></xmp>
+        <code class="code-snippet-js"
+          >.m1 {
+          <code class="code-snippet-tip">columns: 3;</code>
+          } .m2 {
+          <code class="code-snippet-tip">display: flex;</code>
+          }</code
+        >
+        <code class="code-snippet-tip"></code>
+      </div>
+    </div>
+  </body>
+</html>
+<!--Resources
+https://css-tricks.com/centering-css-complete-guide/-->
